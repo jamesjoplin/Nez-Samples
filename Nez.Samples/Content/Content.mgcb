@@ -10,10 +10,10 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:../../Nez/Nez.PipelineImporter/bin/Debug/Nez.dll
-/reference:../../Nez/Nez.PipelineImporter/bin/Debug/Nez.PipelineImporter.dll
-/reference:../../Nez/Nez.PipelineImporter/bin/Debug/Newtonsoft.Json.dll
-/reference:../../Nez/Nez.PipelineImporter/bin/Debug/Ionic.ZLib.dll
+/reference:../../Nez/Nez.PipelineImporter/bin/Debug/netstandard2.0/Nez.dll
+/reference:../../Nez/Nez.PipelineImporter/bin/Debug/netstandard2.0/Nez.PipelineImporter.DotNetCore.dll
+/reference:../../Nez/Nez.PipelineImporter/bin/Debug/netstandard2.0/Newtonsoft.Json.dll
+/reference:../../Nez/Nez.PipelineImporter/bin/Debug/netstandard2.0/Ionic.ZLib.dll
 
 #---------------------------------- Content ---------------------------------#
 

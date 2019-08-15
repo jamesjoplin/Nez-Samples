@@ -13,7 +13,7 @@ namespace Nez.Samples
 	/// this entire class is one big sweet hack job to make adding samples easier. An exceptional hack is made so that we can render small
 	/// pixel art scenes pixel perfect and still display our UI at a reasonable size.
 	/// </summary>
-	public abstract class SampleScene : Scene, IFinalRenderDelegate
+	public abstract class SampleScene : Scene
 	{
 		public const int SCREEN_SPACE_RENDER_LAYER = 999;
 		public UICanvas canvas;
@@ -31,7 +31,7 @@ namespace Nez.Samples
 				// dont actually add the renderer since we will manually call it later
 				_screenSpaceRenderer = new ScreenSpaceRenderer( 100, SCREEN_SPACE_RENDER_LAYER );
 				_screenSpaceRenderer.shouldDebugRender = false;
-				finalRenderDelegate = this;
+				//finalRenderDelegate = this;
 			}
 			else
 			{
@@ -136,6 +136,9 @@ namespace Nez.Samples
 		public void onAddedToScene()
 		{ }
 
+		public void onAddedToScene(Scene scene)
+		{ }
+
 
 		public void onSceneBackBufferSizeChanged( int newWidth, int newHeight )
 		{
@@ -152,6 +155,11 @@ namespace Nez.Samples
 			Graphics.instance.batcher.end();
 
 			_screenSpaceRenderer.render( scene );
+		}
+
+		public void handleFinalRender(RenderTarget2D source, Color letterboxColor, RenderTarget2D dest, Rectangle finalRenderDestinationRect, SamplerState samplerState)
+		{
+			//_screenSpaceRenderer.render(scene);
 		}
 
 		#endregion

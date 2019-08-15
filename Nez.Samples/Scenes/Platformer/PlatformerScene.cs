@@ -29,7 +29,7 @@ namespace Nez.Samples
 			var playerEntity = createEntity( "player", new Vector2( spawnObject.x, spawnObject.y ) );
 			playerEntity.addComponent( new Caveman() );
 			playerEntity.addComponent( new BoxCollider( -8, -16, 16, 32 ) );
-			playerEntity.addComponent( new TiledMapMover( tiledMapComponent.collisionLayer, true ) );
+			playerEntity.addComponent( new TiledMapMover( tiledMapComponent.collisionLayer ) );			
 
 			addPostProcessor( new VignettePostProcessor( 1 ) );
 		}
